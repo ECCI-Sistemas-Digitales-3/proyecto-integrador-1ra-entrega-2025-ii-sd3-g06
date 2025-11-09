@@ -123,7 +123,13 @@ except KeyboardInterrupt:
 
 
 ![bomba 1](https://github.com/user-attachments/assets/b41bea87-be03-41bb-9fb1-dc46fec7b061)
+____________________________________________________________________________________________________________________________________________
 ![node red](https://github.com/user-attachments/assets/9402b950-e686-446e-95ca-bc208b62f7d1)
+
+En esta imagen podemos ver la salida de depuración del sistema de control de bombas mediante MQTT con ESP32 en funcionamiento, donde se puede observar que se ha recibido y procesado exitosamente el comando "ON Bomba1" a través del tópico "bombas/control", indicando que la bomba conectada al pin GPIO 14 ha sido activada, mientras el sistema mantiene su conexión WiFi y MQTT con el broker en segundo plano, esperando nuevos comandos para controlar las demás bombas del sistema.
+____________________________________________________________________________________________________________________________________________
 ![consolsa](https://github.com/user-attachments/assets/b23fe607-52df-496b-9384-a0118a9d4528)
+
+En esta imagen podemos ver la consola de seguimiento del sistema de control de bombas MQTT donde se observa el proceso completo de conexión: primero se establece la conexión WiFi exitosa con la IP 10.42.197.243, luego se conecta al broker MQTT y se suscribe al tópico 'bombas/control', y finalmente se reciben y procesan dos comandos consecutivos - "B1_ON" para encender la bomba 1 seguido inmediatamente por "B1_OFF" para apagarla, demostrando que el sistema responde correctamente a los mensajes de control en tiempo real.
 
 
