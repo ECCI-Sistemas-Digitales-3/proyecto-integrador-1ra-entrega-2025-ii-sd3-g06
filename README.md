@@ -93,7 +93,7 @@ def mensaje(topic, msg):
     elif msg == "B5_OFF":
         bombas[4].value(0)  # Apaga bomba 5
     else:
-        print("⚠️ Comando desconocido:", msg)
+        print("Comando desconocido:", msg)
 
 # --- Función para conectarse al broker MQTT ---
 def conectar_mqtt():
@@ -105,7 +105,7 @@ def conectar_mqtt():
     client.connect()
     # Se suscribe al tópico donde recibirá comandos
     client.subscribe(TOPIC)
-    print("✅ Conectado al broker MQTT y suscrito a 'bombas/control'")
+    print(" Conectado al broker MQTT y suscrito a 'bombas/control'")
     return client  # Devuelve el objeto cliente para usarlo en el programa principal
 
 # --- Programa principal ---
@@ -123,6 +123,8 @@ except KeyboardInterrupt:
 
 
 ![bomba 1](https://github.com/user-attachments/assets/b41bea87-be03-41bb-9fb1-dc46fec7b061)
+
+Esta imagen muestra un widget de control con el botón etiquetado "ON BOMBA 1" que corresponde exactamente al comando MQTT programado en el sistema, donde al activarse este widget se envía el mensaje "B1_ON" al tópico "bombas/control" que el ESP32 recibe y procesa para encender la bomba conectada al pin GPIO 14, completando así el ciclo de control remoto desde la interfaz gráfica hasta la acción física del actuador.
 ____________________________________________________________________________________________________________________________________________
 ![node red](https://github.com/user-attachments/assets/9402b950-e686-446e-95ca-bc208b62f7d1)
 
