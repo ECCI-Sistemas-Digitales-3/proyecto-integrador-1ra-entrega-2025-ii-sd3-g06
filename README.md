@@ -32,8 +32,6 @@ Documentación:
 # para controlar 5 bombas mediante comandos enviados al tópico:
 # "bombas/control".
 #
-# Autor: [Tu nombre aquí]
-# Fecha: [Coloca la fecha actual]
 # ------------------------------------------------------------
 
 # --- Importación de librerías necesarias ---
@@ -122,3 +120,10 @@ except KeyboardInterrupt:
     # Si el usuario interrumpe la ejecución (Ctrl + C), se desconecta del broker
     print("Desconectando del broker MQTT...")
     cliente.disconnect()
+
+
+![bomba 1](https://github.com/user-attachments/assets/b41bea87-be03-41bb-9fb1-dc46fec7b061)
+![node red](https://github.com/user-attachments/assets/9402b950-e686-446e-95ca-bc208b62f7d1)
+![consolsa](https://github.com/user-attachments/assets/b23fe607-52df-496b-9384-a0118a9d4528)
+
+
